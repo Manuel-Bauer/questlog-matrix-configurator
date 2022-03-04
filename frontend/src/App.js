@@ -31,6 +31,7 @@ function App() {
 
   function handleChange(event) {
     const {name, value} = event.target
+    console.log(name, value)
     setCountrySelection(prevData => {
         return {
             ...prevData,

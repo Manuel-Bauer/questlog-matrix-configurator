@@ -11,38 +11,38 @@
   stroke-miterlimit: 10;
 }
 
-.country--1 {
+.country1 {
   transform: translate(2%, 2%);
 }
 
-.country--2 {
+.country2 {
   transform: translate(35%, 2%);
 }
 
-.country--3 {
+.country3 {
   transform: translate(66%, 2%);
 }
 
-.country--4 {
+.country4 {
   transform: translate(2%, 35%);
 }
 
-.country--5 {
+.country5 {
   transform: translate(35%, 35%);
 }
 
-.country--6 {
+.country6 {
   transform: translate(66%, 35%);
 }
 
-.country--7 {
+.country7 {
   transform: translate(2%, 68%);
 }
 
-.country--8 {
+.country8 {
   transform: translate(35%, 68%);
 }
 
-.country--9 {
+.country9 {
   transform: translate(66%, 68%);
 }
