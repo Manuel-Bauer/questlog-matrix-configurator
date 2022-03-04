@@ -10,3 +10,39 @@
   stroke-width: 1;
   stroke-miterlimit: 10;
 }
+
+.country--1 {
+  transform: translate(2%, 2%);
+}
+
+.country--2 {
+  transform: translate(35%, 2%);
+}
+
+.country--3 {
+  transform: translate(66%, 2%);
+}
+
+.country--4 {
+  transform: translate(2%, 35%);
+}
+
+.country--5 {
+  transform: translate(35%, 35%);
+}
+
+.country--6 {
+  transform: translate(66%, 35%);
+}
+
+.country--7 {
+  transform: translate(2%, 68%);
+}
+
+.country--8 {
+  transform: translate(35%, 68%);
+}
+
+.country--9 {
+  transform: translate(66%, 68%);
+}
