@@ -3,17 +3,19 @@ import "./App.css";
 import Matrix from "./Matrix"
 
 function App() {
-  const [data, setData] = React.useState(null);
+  const [combs, setCombs] = React.useState(null);
 
   React.useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setCombs(data));
   }, []);
+
+  const countries = ["australien", "china", "deutschland", "griechenland", "hawaii", "island", "italien", "kanada", "usa"]
 
   return (
     <div className="App" width="1000px">
-      <Matrix/>
+      <Matrix countries={countries} combs={combs}/>
     </div>
   );
 }
