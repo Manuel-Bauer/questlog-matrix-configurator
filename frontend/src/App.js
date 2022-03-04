@@ -40,11 +40,14 @@ function App() {
     })
 }
 
+console.log(<Matrix countrySelection={countrySelection} combs={combs}/>)
+
 
   return (
     <div className="App" width="1000px">
       <Form countries={countries} handleChange={handleChange} countrySelection={countrySelection}/>
       <Matrix countrySelection={countrySelection} combs={combs}/>
+      <button>Save</button>
     </div>
   );
 }
