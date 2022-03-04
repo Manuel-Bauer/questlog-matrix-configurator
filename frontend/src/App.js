@@ -8,15 +8,15 @@ function App() {
   const [countries, SetCountries] = React.useState(null)
 
   const [countrySelection, setCountrySelection] = React.useState({
-    country1: "australien",
-    country2: "china",
-    country3: "deutschland",
-    country4: "griechenland",
-    country5: "hawaii",
-    country6: "island",
-    country7: "italien",
-    country8: "kanada",
-    country9: "usa",
+    country1: "",
+    country2: "",
+    country3: "",
+    country4: "",
+    country5: "",
+    country6: "",
+    country7: "",
+    country8: "",
+    country9: "",
   })
 
   React.useEffect(() => {
@@ -29,9 +29,6 @@ function App() {
       );
   }, []);
 
-
-  console.log(combs)
-
   function handleChange(event) {
     const {name, value} = event.target
     setCountrySelection(prevData => {
@@ -41,8 +38,6 @@ function App() {
         }
     })
 }
-
-
 
 
   return (
