@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Matrix from "./Matrix"
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -12,7 +12,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" width="1000px">
+      <Matrix/>
     </div>
   );
 }
