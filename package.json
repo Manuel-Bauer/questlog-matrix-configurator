@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Manuel-Bauer/questlog-v2#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "file-system": "^2.2.2"
   }
 }
