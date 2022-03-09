@@ -1,0 +1,18 @@
+To-Dos: 
+
+- PROBLEM: Keine der React anpassungen, in terms of styling und position findet Anklang im HTML wenn man es einfach rauskopiert. Erst weiter recherchieren ob man nicht doch SVGs die man dynamisch selbst kreiert hat exportieren kann. Wenn das ohne Ergebnis abläuft werde ich styling und position direkt in SVG integrieren. Sollte eigentlich etzatle net sooo des Problem sein sammermal
+
+- Most important: Create process on how to define offset for each country. File config file where everything is defined. The normal offset and each countries offset
+- Based on this collect all countries automatically 
+
+- Style buttons
+- Create Save button
+
+
+- Think how to implement and test offset 
+
+- Create array of possible countries based on filenames? I rather think its possible to have a textfile of each countries with offsets anyways, so that I can extract the names from there.
+
+- Error handling and check how to deal with 0 values in the beginning
+
+

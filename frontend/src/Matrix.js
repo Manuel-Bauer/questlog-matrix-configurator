@@ -3,8 +3,6 @@ import {nanoid} from "nanoid"
 
 function Matrix (props) {
 
-  console.log(props)
-
   function createPolygons(country) {
     // Filter for country in props.combs
       if(props.combs && country) {
