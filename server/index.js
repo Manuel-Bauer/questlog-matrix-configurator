@@ -34,7 +34,11 @@ countries.forEach((country) => {
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-app.use(express.json());
+
+app.use(express.json({ limit: '50mb' }));
+app.use(
+  express.urlencoded({ limit: '50mb', extended: true, parameterLimit: 50000 })
+);
 
 app.use(
   cors({
@@ -47,8 +51,15 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/data', (req, res) => {
-  console.log(req.body);
   res.send(req.body);
+  fs.appendFile(
+    './img/result.svg',
+    req.body.element.split(`"preserve">`)[1],
+    function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    }
+  );
 });
 
 app.listen(PORT, () => {

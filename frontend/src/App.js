@@ -20,8 +20,6 @@ function App() {
     country9: '',
   });
 
-  const [htmlSVG, setHtmlSVG] = React.useState('');
-
   React.useEffect(() => {
     fetch('/api')
       .then((res) => res.json())
@@ -44,12 +42,9 @@ function App() {
 
   function saveSVG(e) {
     e.preventDefault();
-    // Fetch.post
     Axios.post('http://localhost:3001/data', {
-      body: document.getElementById('Layer_1').outerHTML,
-    })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      element: document.getElementById('Layer_1').outerHTML,
+    });
   }
 
   return (
