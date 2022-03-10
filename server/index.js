@@ -4,7 +4,7 @@ const cors = require('cors');
 
 // Extracts SVG coordinates for each country
 function extractCoords(country) {
-  const data = fs.readFileSync(`./img/countries/${country}.svg`, {
+  const data = fs.readFileSync(`./server/img/countries/${country}.svg`, {
     encoding: 'utf8',
     flag: 'r',
   });
@@ -15,7 +15,7 @@ const countries = [];
 const combs = [];
 
 // Reads img folder and extracts country names to countries array
-fs.readdirSync('./img/countries').forEach((file) => {
+fs.readdirSync('./server/img/countries').forEach((file) => {
   countries.push(file.split('.')[0]);
 });
 
