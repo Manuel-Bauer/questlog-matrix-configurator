@@ -1,6 +1,6 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
-import { offsetGeneral } from './config';
+import { offsetGeneral, offsetCountry } from './config';
 
 function Matrix(props) {
   function createPolygons(country) {
@@ -23,9 +23,15 @@ function Matrix(props) {
     const countryArray = Object.entries(selection).map((el) => el[1]);
 
     return countryArray.map((el, index) => {
-      let offsetX = offsetGeneral[index][0];
-      let offsetY = offsetGeneral[index][1];
+      // Check if element is there, if yes set offset countries
+      let offsetCountryX = el ? offsetCountry[el][0] : 0;
+      let offsetCountryY = el ? offsetCountry[el][1] : 0;
 
+      // General box offsets and country offsets result in total offsets
+      let offsetX = offsetGeneral[index][0] + offsetCountryX;
+      let offsetY = offsetGeneral[index][1] + offsetCountryY;
+
+      // Return SVG element for each box including offsets
       return (
         <g transform={`translate(${offsetX} ${offsetY})`}>
           {createPolygons(el)}

@@ -8,6 +8,9 @@ Next steps:
     2) Bring them into config file and import them
     3) Create Offsets for each country and implement process
 
+- Create countries based on what is in the folder
+- Create separate offset file
+
 
 
 
