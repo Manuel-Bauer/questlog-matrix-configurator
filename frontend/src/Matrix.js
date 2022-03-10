@@ -23,9 +23,18 @@ function Matrix(props) {
     const countryArray = Object.entries(selection).map((el) => el[1]);
 
     return countryArray.map((el, index) => {
-      // Check if element is there, if yes set offset countries
-      let offsetCountryX = el ? offsetCountry[el][0] : 0;
-      let offsetCountryY = el ? offsetCountry[el][1] : 0;
+      // Check if element is there if not set country offset to 0 to avoid error
+      // If yes check if offset for country is defined, if yes use that if no set offset to zero
+      let offsetCountryX = el
+        ? offsetCountry[el]
+          ? offsetCountry[el][0]
+          : 0
+        : 0;
+      let offsetCountryY = el
+        ? offsetCountry[el]
+          ? offsetCountry[el][1]
+          : 0
+        : 0;
 
       // General box offsets and country offsets result in total offsets
       let offsetX = offsetGeneral[index][0] + offsetCountryX;

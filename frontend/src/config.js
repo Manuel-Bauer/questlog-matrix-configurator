@@ -18,10 +18,10 @@ export const offsetCountry = {
   china: [0, 0],
   deutschland: [0, 0],
   griechenland: [0, 0],
-  hawaii: [0, 0],
   island: [0, 0],
   italien: [0, 0],
   kanada: [0, 0],
   usa: [0, 0],
   chile: [0, 0],
+  hawaii: [0, 0]
 };
