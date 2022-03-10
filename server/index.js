@@ -1,7 +1,6 @@
 const express = require('express');
 const fs = require('file-system');
 const cors = require('cors');
-const { nanoid } = require('nanoid');
 
 // Extracts SVG coordinates for each country
 function extractCoords(country) {
@@ -50,11 +49,21 @@ app.get('/api', (req, res) => {
 
 app.post('/data', (req, res) => {
   res.send(req.body);
-  let filename = `./img/matrix/matrix-${nanoid()}.svg`;
 
-  // Copy result, if copyied append
+  // Create timestamp
+  let date = new Date();
+  const timestamp = `${date.getYear() + 1900}-${
+    date.getMonth() + 1
+  }-${date.getDate()}-${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
+
+  // Create unique filename for result
+  let filename = `./img/matrix/matrix-${timestamp}.svg`;
+
+  // Copy base matrix
   fs.copyFileSync('./img/matrix/matrix.svg', filename);
 
+  // Append svg data of newly created SVG
+  // See if i can refactor or explain
   fs.appendFileSync(filename, req.body.element.split(`"preserve">`)[1]);
 });
 

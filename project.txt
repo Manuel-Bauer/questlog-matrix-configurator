@@ -1,9 +1,0 @@
-To-Dos: 
-
-- Put result in own folder
-- Give result file a date id
-
-
-
-
-
