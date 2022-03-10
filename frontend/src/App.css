@@ -6,17 +6,18 @@
 
 html {
   font-size: 62.5%;
+  font-family: Raleway, sans-serif;
 }
 
 .st0 {
   fill: none;
-  stroke: #ff0000;
+  stroke: black;
   stroke-width: 1;
   stroke-miterlimit: 10;
 }
 .st1 {
   fill: none;
-  stroke: #0000ff;
+  stroke: transparent;
   stroke-width: 1;
   stroke-miterlimit: 10;
 }
@@ -32,10 +33,19 @@ html {
 
 .select {
   font-size: 1.6rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.select:hover {
+  background-color: #f4b800;
 }
 
 .button--select {
-  font-family: Raleway, sans-serif;
   font-weight: 600;
   font-size: 3rem;
   padding: 1rem 2rem;
@@ -53,44 +63,6 @@ html {
   opacity: 0.8;
 }
 
-/* text-size-adjust: 100%;
---color-body-text: #000000;
---color-body: #ffffff;
---color-bg: #ffffff;
-text-rendering: optimizeLegibility;
--webkit-font-smoothing: antialiased;
-box-sizing: inherit;
-text-decoration: none;
-user-select: none;
-appearance: none;
-align-items: center;
-border: 1px solid transparent;
-box-shadow: none;
-display: inline-flex;
-position: relative;
-vertical-align: top;
-font-family: Raleway, sans-serif;
-font-weight: 600;
-font-style: normal;
-letter-spacing: 0px;
-border-width: 1px;
-cursor: pointer;
-justify-content: center;
-padding-bottom: calc(0.375em - 1px);
-padding-left: 1em;
-padding-right: 1em;
-padding-top: calc(0.375em - 1px);
-text-align: center;
-text-transform: none;
-transition: background 0.2s ease-in-out;
-font-size: 1rem;
-border-radius: 10px;
-width: auto;
-line-height: inherit;
-height: auto;
-max-width: 100%;
-white-space: normal;
-overflow-wrap: normal;
-color: #ffffff;
-background-color: ;
-border-color: #ef5552; */
+.option {
+  padding: 5rem;
+}
