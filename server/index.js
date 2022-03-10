@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('file-system');
 const cors = require('cors');
+const { nanoid } = require('nanoid');
 
 const countries = [
   'australien',
@@ -52,14 +53,12 @@ app.get('/api', (req, res) => {
 
 app.post('/data', (req, res) => {
   res.send(req.body);
-  fs.appendFile(
-    './img/result.svg',
-    req.body.element.split(`"preserve">`)[1],
-    function (err) {
-      if (err) throw err;
-      console.log('Saved!');
-    }
-  );
+  let filename = `./img/result-${nanoid()}.svg`;
+
+  // Copy result, if copyied append
+  fs.copyFileSync('./img/result.svg', filename);
+
+  fs.appendFileSync(filename, req.body.element.split(`"preserve">`)[1]);
 });
 
 app.listen(PORT, () => {
