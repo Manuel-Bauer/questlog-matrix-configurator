@@ -23,4 +23,5 @@ export const offsetCountry = {
   italien: [0, 0],
   kanada: [0, 0],
   usa: [0, 0],
+  chile: [0, 0],
 };
