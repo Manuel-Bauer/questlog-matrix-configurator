@@ -4,7 +4,6 @@ import Matrix from './Matrix';
 import Form from './Form';
 import Axios from 'axios';
 
-
 function App() {
   const [combs, setCombs] = React.useState(null);
   const [countries, SetCountries] = React.useState(null);
@@ -55,8 +54,10 @@ function App() {
         handleChange={handleChange}
         countrySelection={countrySelection}
       />
+      <button className='button--select' onClick={(e) => saveSVG(e)}>
+        Save
+      </button>
       <Matrix countrySelection={countrySelection} combs={combs} />
-      <button onClick={(e) => saveSVG(e)}>Save</button>
     </div>
   );
 }
