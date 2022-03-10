@@ -14,7 +14,7 @@ export const offsetGeneral = [
 ];
 
 export const offsetCountry = {
-  australien: [200, 200],
+  australien: [0, 0],
   china: [0, 0],
   deutschland: [0, 0],
   griechenland: [0, 0],

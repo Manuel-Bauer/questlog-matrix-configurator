@@ -3,19 +3,8 @@ const fs = require('file-system');
 const cors = require('cors');
 const { nanoid } = require('nanoid');
 
-const countries = [
-  'australien',
-  'china',
-  'deutschland',
-  'griechenland',
-  'hawaii',
-  'island',
-  'italien',
-  'kanada',
-  'usa',
-];
-
-function extractPoints(country) {
+// Extracts SVG coordinates for each country
+function extractCoords(country) {
   const data = fs.readFileSync(`./img/${country}.svg`, {
     encoding: 'utf8',
     flag: 'r',
@@ -23,12 +12,19 @@ function extractPoints(country) {
   return data.match(/\d{1,2}[\.|\d|\s|,]{30,}\d/g);
 }
 
+const countries = [];
 const combs = [];
 
+// Reads img folder and extracts country names to countries array
+fs.readdirSync('./img').forEach((file) => {
+  countries.push(file.split('.')[0]);
+});
+
+// Loops through countries array and pushes country name and country svg coordinates to combs object
 countries.forEach((country) => {
   combs.push({
     country: country,
-    points: extractPoints(country),
+    coords: extractCoords(country),
   });
 });
 

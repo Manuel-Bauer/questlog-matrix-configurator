@@ -1,15 +1,6 @@
 To-Dos: 
 
-- Most important: Create process on how to define boffset for each country. File config file where everything is defined. The normal offset and each countries offset.
-- Based on this collect all countries automatically
-
-Next steps: 
-    1) Create good base offsets
-    2) Bring them into config file and import them
-    3) Create Offsets for each country and implement process
-
 - Create countries based on what is in the folder
-- Create separate offset file
 
 
 

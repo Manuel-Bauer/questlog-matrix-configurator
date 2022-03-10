@@ -7,9 +7,9 @@ function Matrix(props) {
     // Filter for country in props.combs
     if (props.combs && country) {
       const combs = props.combs;
-      const points = combs.filter((el) => el.country === country)[0].points;
+      const coords = combs.filter((el) => el.country === country)[0].coords;
       // Map array and create polygon for each point
-      return points.map((poly, index) => {
+      return coords.map((poly, index) => {
         return (
           <g>
             <polygon key={nanoid()} className='st0' points={poly} />
