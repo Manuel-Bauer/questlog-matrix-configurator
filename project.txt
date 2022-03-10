@@ -1,6 +1,8 @@
 To-Dos: 
 
-- Create countries based on what is in the folder
+- Put result in own folder
+- Give result file a date id
+
 
 
 

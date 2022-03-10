@@ -5,7 +5,7 @@ const { nanoid } = require('nanoid');
 
 // Extracts SVG coordinates for each country
 function extractCoords(country) {
-  const data = fs.readFileSync(`./img/${country}.svg`, {
+  const data = fs.readFileSync(`./img/countries/${country}.svg`, {
     encoding: 'utf8',
     flag: 'r',
   });
@@ -16,7 +16,7 @@ const countries = [];
 const combs = [];
 
 // Reads img folder and extracts country names to countries array
-fs.readdirSync('./img').forEach((file) => {
+fs.readdirSync('./img/countries').forEach((file) => {
   countries.push(file.split('.')[0]);
 });
 
@@ -28,6 +28,7 @@ countries.forEach((country) => {
   });
 });
 
+// Set up express
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -49,10 +50,10 @@ app.get('/api', (req, res) => {
 
 app.post('/data', (req, res) => {
   res.send(req.body);
-  let filename = `./img/result-${nanoid()}.svg`;
+  let filename = `./img/matrix/matrix-${nanoid()}.svg`;
 
   // Copy result, if copyied append
-  fs.copyFileSync('./img/result.svg', filename);
+  fs.copyFileSync('./img/matrix/matrix.svg', filename);
 
   fs.appendFileSync(filename, req.body.element.split(`"preserve">`)[1]);
 });
