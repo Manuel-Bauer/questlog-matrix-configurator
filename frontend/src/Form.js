@@ -9,9 +9,7 @@ function Form(props) {
       return countries.map(country => {
         return <option value={country}>{country}</option>
    })
-    }
-    
-  }
+    }}
 
   return (
      <form className="form">

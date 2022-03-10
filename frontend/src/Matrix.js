@@ -1,5 +1,6 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
+import { offsetGeneral } from './config';
 
 function Matrix(props) {
   function createPolygons(country) {
@@ -18,24 +19,12 @@ function Matrix(props) {
     }
   }
 
-  const offset = [
-    [20, 20],
-    [400, 20],
-    [800, 20],
-    [20, 300],
-    [400, 300],
-    [800, 300],
-    [20, 600],
-    [400, 600],
-    [800, 600],
-  ];
-
   function createCountries(selection) {
     const countryArray = Object.entries(selection).map((el) => el[1]);
 
     return countryArray.map((el, index) => {
-      let offsetX = offset[index][0];
-      let offsetY = offset[index][1];
+      let offsetX = offsetGeneral[index][0];
+      let offsetY = offsetGeneral[index][1];
 
       return (
         <g transform={`translate(${offsetX} ${offsetY})`}>
