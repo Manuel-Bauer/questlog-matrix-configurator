@@ -22,6 +22,8 @@ function App() {
     country9: '',
   });
 
+  const [showFeedback, setShowFeedback] = React.useState(false);
+
   React.useEffect(() => {
     fetch('/api')
       .then((res) => res.json())
@@ -47,6 +49,10 @@ function App() {
     Axios.post('http://localhost:3001/data', {
       element: document.getElementById('Layer_1').outerHTML,
     });
+    setShowFeedback(true);
+    setTimeout(() => {
+      setShowFeedback(false);
+    }, 2000);
   }
 
   return (
@@ -63,6 +69,10 @@ function App() {
       <button className='button--select' onClick={(e) => saveSVG(e)}>
         Save
       </button>
+      <div className={showFeedback ? `feedback` : 'feedback hidden'}>
+        SVG Saved
+      </div>
+      ;
       <Matrix countrySelection={countrySelection} combs={combs} />
     </div>
   );
