@@ -3,13 +3,15 @@ import './App.css';
 import Matrix from './Matrix';
 import Form from './Form';
 import Axios from 'axios';
-import logoBlack from './logo--black.jpg';
 import logoYellow from './logo--yellow.jpg';
 
 function App() {
+  // Holds each countries polygon paths
   const [combs, setCombs] = React.useState(null);
+  // Holds selectable countries
   const [countries, SetCountries] = React.useState(null);
 
+  // Holds current country selection
   const [countrySelection, setCountrySelection] = React.useState({
     country1: '',
     country2: '',
@@ -22,8 +24,10 @@ function App() {
     country9: '',
   });
 
+  // Holds if feedback after saving should be shown
   const [showFeedback, setShowFeedback] = React.useState(false);
 
+  // Fetche data from api and sets Combs and Countries state when app starts
   React.useEffect(() => {
     fetch('/api')
       .then((res) => res.json())
@@ -33,6 +37,7 @@ function App() {
       });
   }, []);
 
+  //
   function handleChange(event) {
     const { name, value } = event.target;
     console.log(name, value);
@@ -59,7 +64,7 @@ function App() {
     <div className='App' width='1000px'>
       <header className='header'>
         <img className='logo' src={logoYellow} alt='Logo' />
-        <h1 className='heading--1'>Polygon-Configurator-Y4500</h1>
+        <h1 className='heading--1'>matrix-configurator</h1>
       </header>
       <Form
         countries={countries}
@@ -73,7 +78,11 @@ function App() {
         SVG Saved
       </div>
       ;
-      <Matrix className="matrix" countrySelection={countrySelection} combs={combs} />
+      <Matrix
+        className='matrix'
+        countrySelection={countrySelection}
+        combs={combs}
+      />
     </div>
   );
 }

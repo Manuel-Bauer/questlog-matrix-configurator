@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('file-system');
 const cors = require('cors');
 
-// Extracts SVG coordinates for each country
+// Extracts SVG coordinates for each country from provided SVGs in countries folder
 function extractCoords(country) {
   const data = fs.readFileSync(`./server/img/countries/${country}.svg`, {
     encoding: 'utf8',
@@ -11,15 +11,16 @@ function extractCoords(country) {
   return data.match(/\d{1,2}[\.|\d|\s|,]{30,}\d/g);
 }
 
+// Set up Arrays for unique countries and combs for each country
 const countries = [];
 const combs = [];
 
-// Reads img folder and extracts country names to countries array
+// Read countries folder and extracts file names to countries array
 fs.readdirSync('./server/img/countries').forEach((file) => {
   countries.push(file.split('.')[0]);
 });
 
-// Loops through countries array and pushes country name and country svg coordinates to combs object
+// Loop through countries array and pushes country name and country svg coordinates to combs object
 countries.forEach((country) => {
   combs.push({
     country: country,
@@ -63,7 +64,7 @@ app.post('/data', (req, res) => {
   fs.copyFileSync('./server/img/matrix/matrix.svg', filename);
 
   // Append svg data of newly created SVG
-  // See if i can refactor or explain
+  // Take only svg data after preserve, because options are defined already in result base matrix
   fs.appendFileSync(filename, req.body.element.split(`"preserve">`)[1]);
 });
 
