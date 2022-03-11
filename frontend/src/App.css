@@ -55,18 +55,71 @@ html {
   text-align: center;
 }
 
-.select {
-  font-size: 1.6rem;
+select {
+  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+  background: #f6f7f6;
+  border: none;
+  width: 100%;
+  text-align: center;
   transition: all 0.2s ease-in-out;
+  outline: none;
+  /* font-size: 1.6rem;
   font-weight: 400;
   text-transform: uppercase;
   padding: 1rem 2rem;
   text-align: center;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
-.select:hover {
-  background-color: #f4b800;
+select:hover {
+  background-color: rgb(240, 236, 236);
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select:hover {
+  color: #ef5552;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background: rgb(231, 226, 226);
+  height: 100%;
+  width: 4rem;
+  pointer-events: none;
+}
+
+.arrow::before,
+.arrow::after {
+  --size: 0.7em;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+
+  top: 38%;
+}
+
+.arrow::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+
+  top: 63%;
 }
 
 .button--select {
