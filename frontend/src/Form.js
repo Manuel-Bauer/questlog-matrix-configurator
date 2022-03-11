@@ -6,7 +6,7 @@ function Form(props) {
   function createSelections(countries) {
     if (countries) {
       return countries.map((country) => {
-        return <option value={country}>{country}</option>;
+        return <option className="option" value={country}>{country}</option>;
       });
     }
   }

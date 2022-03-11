@@ -57,10 +57,10 @@ app.post('/data', (req, res) => {
   }-${date.getDate()}-${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
 
   // Create unique filename for result
-  let filename = `./img/matrix/matrix-${timestamp}.svg`;
+  let filename = `./server/img/matrix/matrix-${timestamp}.svg`;
 
   // Copy base matrix
-  fs.copyFileSync('./img/matrix/matrix.svg', filename);
+  fs.copyFileSync('./server/img/matrix/matrix.svg', filename);
 
   // Append svg data of newly created SVG
   // See if i can refactor or explain

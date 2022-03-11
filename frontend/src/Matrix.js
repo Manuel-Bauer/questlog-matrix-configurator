@@ -9,7 +9,7 @@ function Matrix(props) {
       const combs = props.combs;
       const coords = combs.filter((el) => el.country === country)[0].coords;
       // Map array and create polygon for each point
-      return coords.map((poly, index) => {
+      return coords.map((poly) => {
         return (
           <g>
             <polygon key={nanoid()} className='st0' points={poly} />
@@ -42,7 +42,7 @@ function Matrix(props) {
 
       // Return SVG element for each box including offsets
       return (
-        <g transform={`translate(${offsetX} ${offsetY})`}>
+        <g className='country' transform={`translate(${offsetX} ${offsetY})`}>
           {createPolygons(el)}
         </g>
       );

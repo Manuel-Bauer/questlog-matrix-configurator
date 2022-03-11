@@ -135,10 +135,6 @@ select:hover {
   opacity: 0.8;
 }
 
-.option {
-  padding: 5rem;
-}
-
 .feedback {
   position: fixed;
   border: none;

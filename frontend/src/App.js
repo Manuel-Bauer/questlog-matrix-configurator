@@ -73,7 +73,7 @@ function App() {
         SVG Saved
       </div>
       ;
-      <Matrix countrySelection={countrySelection} combs={combs} />
+      <Matrix className="matrix" countrySelection={countrySelection} combs={combs} />
     </div>
   );
 }
