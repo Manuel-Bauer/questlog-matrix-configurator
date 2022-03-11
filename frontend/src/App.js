@@ -3,6 +3,8 @@ import './App.css';
 import Matrix from './Matrix';
 import Form from './Form';
 import Axios from 'axios';
+import logoBlack from './logo--black.jpg';
+import logoYellow from './logo--yellow.jpg';
 
 function App() {
   const [combs, setCombs] = React.useState(null);
@@ -49,6 +51,10 @@ function App() {
 
   return (
     <div className='App' width='1000px'>
+      <header className='header'>
+        <img className='logo' src={logoYellow} alt='Logo' />
+        <h1 className='heading--1'>Polygon-Configurator-Y4500</h1>
+      </header>
       <Form
         countries={countries}
         handleChange={handleChange}

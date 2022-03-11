@@ -2,11 +2,35 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Raleway, sans-serif;
 }
 
 html {
   font-size: 62.5%;
+}
+
+.header {
+  height: 7rem;
+  background-color: #f6f7f6;
+  display: grid;
+  grid-template-columns: repeat(12, 8.33vw);
+}
+
+.logo {
+  width: 100%;
+  padding: 2rem;
+  align-self: flex-start;
+  grid-column: 1/ 2;
+}
+
+.heading--1 {
   font-family: Raleway, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  grid-column: 4/ 10;
+  padding: 2rem;
+  text-align: center;
 }
 
 .st0 {
