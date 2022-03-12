@@ -17,7 +17,7 @@ html {
 }
 
 .logo {
-  width: 100%;
+  width: 150px;
   padding: 2rem;
   align-self: flex-start;
   grid-column: 1/ 2;
@@ -29,9 +29,10 @@ html {
   font-size: 3rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
-  grid-column: 4/ 10;
+  grid-column: 3/ 11;
   padding: 2rem;
   text-align: center;
+  z-index: 10;
 }
 
 .st0 {
