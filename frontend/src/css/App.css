@@ -42,7 +42,7 @@ html {
 }
 .st1 {
   fill: none;
-  stroke: transparent;
+  stroke: black;
   stroke-width: 1;
   stroke-miterlimit: 10;
 }
