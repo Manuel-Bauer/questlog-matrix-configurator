@@ -22,17 +22,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <h1><a href="www.questlog.eu">Questlog</a></h1>
+    <div align="center>
 
-  <h3 align="center">Matrix-Configurator</h3>
+<a href="www.questlog.eu">
+    <img src="./frontend/src/img/logo--black--white-bg.jpg" alt="Logo" width="300"/>
+  </a>
+</div>
 
+<h1 align="center">Matrix-Configurator</h1>
+<h2><i>“An amazing level of senseless perfectionism, which is simply impossible not to respect.”</i></h2>             
+                  <h2> PLUS ~800% output | MINUS ~500 full time FTEs | MINUS ~120% laser-cutter incidents
   <p align="center">
-    Tool to facilitate automization and quality assurance for Questlog production process.
   </p>
 </div>
 <br>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -58,9 +61,6 @@
 
 <br>
 
-<img src="./frontend/src/img/screenshot.PNG" alt="Product Screenshot" width="500"/>
-
-<br>
 
 The Questlog Matrix Configurator is a browser tool, which increases the level of automization, standardization and quality assurance in the production process by:
 * Providing an interactive React-based UI that allows the laser-cutter specialist to arrange country silhouettes based on demand
@@ -109,9 +109,10 @@ On a Windows OS enter
    ```
 A browser window with the Matrix-Configurator UI will start automatically.
 
-3. Select the country silhouette for each matrix grid 
-4. Once finished, hit the save button.
-5. In the folder server/img/matrix you will find the laser-cutter-ready SVG with an unique ID. 
+3. Select the country silhouette for each matrix grid in dropdown menu
+4. If default position of a specific country needs to be changed, navigate to frontend/src/config and adjust x and y offset for country. Offset is be 0 for x and y by default.
+5. Once finished, hit the save button.
+6. In the folder server/img/matrix you will find the laser-cutter-ready SVG with an unique ID. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
