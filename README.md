@@ -30,12 +30,12 @@
 </div>
 
 <h1 align="center">Matrix-Configurator</h1>
-<h2><i>“An amazing level of senseless perfectionism, which is simply impossible not to respect.”</i></h2>             
-                  <h2> PLUS ~800% output | MINUS ~500 full time FTEs | MINUS ~120% laser-cutter incidents
-  <p align="center">
-  </p>
+
+
+
 </div>
 <br>
+
 
 <!-- TABLE OF CONTENTS -->
 <details>
