@@ -96,16 +96,7 @@ The Questlog Matrix Configurator is a browser tool, which increases the level of
 ## Usage
 
 1. Save country silhouette SVGs in folder /server/img/countries and name them according to the country's name
-2. To start Matrix-Configurator on an Apple or Linux OS navigate to the project folder and enter
-```sh
- npm run dev
-   ```
-On a Windows OS enter 
-```sh
- start npm start & cd frontend & npm start
-   ```
-A browser window with the Matrix-Configurator UI will start automatically.
-
+2. Server starts automatically. Go to http://localhost:3000 in your browser.
 3. Select the country silhouette for each matrix grid in dropdown menu
 4. If default position of a specific country needs to be changed, navigate to frontend/src/config and adjust x and y offset for country. Offset is be 0 for x and y by default.
 5. Once finished, hit the save button.
