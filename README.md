@@ -86,11 +86,7 @@ The Questlog Matrix Configurator is a browser tool, which increases the level of
    ```sh
    git clone https://github.com/DerWaldie/questlog-matrix-configurator.git
    ```
-2. Open Powershell as Adminstrator and navigate to the repository root folder
-3. Run setup.sh
-  ```sh
-    ./setup.sh
-    ```
+2. Right click on "setup" and "Open as Administrator"
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
